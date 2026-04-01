@@ -1,0 +1,148 @@
+/* index-style.css - มู้ดโทนเดียวกับ Dashboard */
+body, html { 
+    margin: 0; padding: 0; 
+    font-family: 'Prompt', sans-serif; 
+    box-sizing: border-box; 
+    color: #333; 
+    background-color: #f9f9f9; 
+    overflow-x: hidden; 
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* Header - สไตล์เดียวกับ Dashboard */
+header { 
+    background-color: rgba(255, 255, 255, 0.98); 
+    padding: 15px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+    box-sizing: border-box;
+}
+
+.logo { font-size: 24px; font-weight: bold; color: #007bff; }
+
+.nav-links { display: flex; gap: 25px; font-size: 16px; }
+.nav-links a:hover { color: #007bff; }
+
+.auth-btns { display: flex; gap: 12px; }
+
+/* ปุ่ม Login/Register แบบโค้งมนเหมือน Dashboard */
+.btn-login { 
+    padding: 8px 20px; 
+    border: 1.5px solid #007bff; 
+    color: #007bff; 
+    border-radius: 25px; 
+    font-size: 14px; 
+    font-weight: 600;
+}
+
+.btn-register { 
+    padding: 8px 20px; 
+    background-color: #007bff; 
+    color: white; 
+    border-radius: 25px; 
+    font-size: 14px; 
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,123,255,0.2);
+}
+
+/* Hero Section */
+.hero { 
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1920&auto=format&fit=crop'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    color: white; 
+    padding: 0 20px;
+}
+
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); line-height: 1.2; }
+.hero-content p { font-size: 1.3rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+
+.cta-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+/* ปุ่ม Main - ปรับให้ดูนุ่มนวลขึ้น */
+.btn-main { 
+    padding: 15px 35px; 
+    font-size: 17px; 
+    border-radius: 35px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    border: none; 
+    min-width: 190px; 
+    transition: 0.4s; 
+}
+
+.btn-find { 
+    background-color: #ffc107; 
+    color: #333; 
+    box-shadow: 0 6px 15px rgba(255,193,7,0.3);
+}
+
+.btn-create { 
+    background-color: white; 
+    color: #007bff; 
+}
+
+.btn-main:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
+
+/* Features - ใช้สไตล์ Card เดียวกับ Dashboard */
+.features { padding: 80px 5%; text-align: center; background-color: #fff; }
+.features h2 { font-size: 2.2rem; margin-bottom: 50px; color: #333; font-weight: 600; }
+
+.feature-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.feature-card { 
+    background-color: white; 
+    padding: 40px 30px; 
+    border-radius: 20px; 
+    border: 1px solid #eee; 
+    transition: 0.4s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.feature-card:hover { 
+    border-color: #007bff; 
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,123,255,0.08);
+}
+
+
+
+
+
+
+
+.feature-icon { font-size: 50px; margin-bottom: 25px; display: block; }
+
+/* Footer */
+footer { background-color: #222; color: white; padding: 50px 20px; text-align: center; }
+.footer-links { display: flex; gap: 20px; justify-content: center; margin-bottom: 25px; }
+.copyright { font-size: 14px; color: #888; }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .btn-main { width: 100%; max-width: 320px; }
+}

@@ -1,0 +1,94 @@
+/* create-trip-style.css */
+
+/* Container หลักของฟอร์ม */
+.form-container { 
+    max-width: 600px; 
+    margin: 120px auto 50px; /* เว้นระยะจาก Header 120px */
+    background: white; 
+    padding: 40px; 
+    border-radius: 25px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08); 
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* การจัดวางกลุ่ม Input */
+.form-group { 
+    text-align: left; 
+    margin-bottom: 20px; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+    color: #444;
+    font-size: 14px;
+}
+
+/* สไตล์ของช่องกรอกข้อมูลทั้งหมด */
+input, select, textarea { 
+    width: 100%; 
+    padding: 14px; 
+    border: 1px solid #e1e1e1; 
+    border-radius: 12px; 
+    font-family: 'Prompt', sans-serif; 
+    font-size: 15px; 
+    background-color: #fcfcfc;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* สำคัญ: กัน Input ทะลุขอบ */
+}
+
+input:focus, select:focus, textarea:focus { 
+    border-color: #007bff; 
+    background-color: #fff;
+    outline: none; 
+    box-shadow: 0 0 8px rgba(0,123,255,0.15); 
+}
+
+/* สไตล์ปุ่มส่งข้อมูล */
+.btn-submit { 
+    width: 100%; 
+    padding: 16px; 
+    background: linear-gradient(135deg, #007bff, #0056b3); 
+    color: white; 
+    border: none; 
+    border-radius: 35px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.4s; 
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(0,123,255,0.25);
+}
+
+.btn-submit:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 12px 25px rgba(0,123,255,0.35); 
+    filter: brightness(1.1);
+}
+
+/* ปรับแต่งสำหรับหน้าจอเล็ก */
+@media (max-width: 600px) {
+    .form-container {
+        margin: 100px 20px;
+        padding: 25px;
+    }
+    
+    .flex-group {
+        flex-direction: column;
+        gap: 0 !important;
+    }
+}
+
+

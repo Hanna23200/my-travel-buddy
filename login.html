@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ - Travel Buddy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Travel Buddy</h2>
+    
+    <form action="login_db.php" method="POST">
+        <div class="input-group">
+            <input type="text" name="user_input" placeholder="ชื่อผู้ใช้งาน หรือ อีเมล" required>
+        </div>
+        <div class="input-group">
+            <input type="password" name="password" placeholder="รหัสผ่าน" required>
+        </div>
+        <button type="submit">เข้าสู่ระบบ</button>
+    </form>
+    
+    <div class="footer">
+        ยังไม่มีบัญชี? <a href="register.html">สมัครสมาชิก</a>
+    </div>
+    
+    <a href="index.html" class="back-home">กลับหน้าแรก</a>
+</div>
+
+</body>
+</html>

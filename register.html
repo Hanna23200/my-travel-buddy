@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก - Travel Buddy</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="register-style.css">
+</head>
+<body>
+
+<div class="reg-card">
+    <h2>ร่วมเป็นครอบครัวเดียวกับเรา</h2>
+    <form action="register_db.php" method="POST" enctype="multipart/form-data">
+        
+        <span class="section-label">ข้อมูลบัญชี</span>
+        <input type="text" name="username" placeholder="ชื่อผู้ใช้งาน (Username)" required>
+        <input type="email" name="email" placeholder="อีเมล" required>
+        <input type="password" name="password" placeholder="รหัสผ่าน" required>
+
+        <span class="section-label">ข้อมูลส่วนตัว</span>
+        <div class="grid">
+            <select name="gender" required>
+                <option value="">เลือกเพศ</option>
+                <option value="Male">ชาย</option>
+                <option value="Female">หญิง</option>
+                <option value="Other">อื่นๆ</option>
+            </select>
+            <input type="text" name="phone" placeholder="เบอร์โทรศัพท์" required>
+        </div>
+        
+        <div class="grid">
+            <div>
+                <label class="label-hint">วันเกิด</label>
+                <input type="date" name="birthdate" required>
+            </div>
+            <div>
+                <label class="label-hint">อาชีพปัจจุบัน</label>
+                <input type="text" name="occupation" placeholder="เช่น นักศึกษา, พนักงานบริษัท">
+            </div>
+        </div>
+
+        <span class="section-label">ถิ่นฐานปัจจุบัน</span>
+        <div class="grid">
+            <input type="text" name="hometown" placeholder="จังหวัดบ้านเกิด">
+            <input type="text" name="current_location" placeholder="จังหวัดที่อยู่ปัจจุบัน">
+        </div>
+
+        <span class="section-label">ตัวตนและไลฟ์สไตล์</span>
+        <label class="label-hint">รูปโปรไฟล์ (แนะนำรูปที่เห็นหน้าชัดเจน)</label>
+        <input type="file" name="profile_img" accept="image/*">
+        
+        <textarea name="bio" rows="4" placeholder="แนะนำตัวสั้นๆ เช่น ไลฟ์สไตล์การเที่ยวที่ชอบ หรือประเทศที่อยากไป..."></textarea>
+
+        <button type="submit">สมัครสมาชิก</button>
+    </form>
+</div>
+
+</body>
+</html>
